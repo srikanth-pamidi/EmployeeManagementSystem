@@ -44,7 +44,7 @@ public class EmployeeData extends BasePerson implements Comparable<EmployeeData>
 		final int prime = 31;
 		int result = super.hashCode();
 		result = prime * result + Objects.hash(department);
-		return result;
+		return result;                                           
 	}
 
 	

@@ -76,7 +76,8 @@ public class EmployeeService {
         return map;
     }
 	
-	//Q6.
+	//Q6.getEmployeeById(int id)
+	//Retrieve employee using Map.
 	public EmployeeData getEmployeeById() {
 		 Map<Integer, EmployeeData> map = new TreeMap<>();
 	        map.put(1, new EmployeeData(101,"Srikanth","IT"));
