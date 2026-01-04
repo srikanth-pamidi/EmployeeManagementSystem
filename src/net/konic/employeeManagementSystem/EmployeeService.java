@@ -78,7 +78,7 @@ public class EmployeeService {
 	
 	//Q6.getEmployeeById(int id)
 	//Retrieve employee using Map.
-	public EmployeeData getEmployeeById() {
+	public EmployeeData getEmployeeById(int id) {
 		 Map<Integer, EmployeeData> map = new TreeMap<>();
 	        map.put(1, new EmployeeData(101,"Srikanth","IT"));
 			map.put(2,new EmployeeData(102,"Hussain","IT"));
@@ -87,7 +87,7 @@ public class EmployeeService {
 			map.put(5,new EmployeeData(105, "Wasif", "Finance"));
 			map.put(1, new EmployeeData(101,"Srikanth","IT"));
 			
-			return map.get(2);
+			return map.get(id);
 	}
 	
 	
@@ -111,21 +111,17 @@ public class EmployeeService {
 				}
 			}
 			return list;
+	 }
 			
+			//Q8. explainFailFast()
 			
-			
+			public String explainFailFast() {
+				return "->If the collection is changed (add or remove) during iteration, Java immediately throws a ConcurrentModificationException.\r"
+						+ "->This happens because the iterator works on the original collection and expects it not to change.\r"
+						+ "->Fail-fast helps detect programming errors early and avoids unpredictable results.";
+			}
 			
 			
 	 }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
+

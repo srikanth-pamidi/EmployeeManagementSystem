@@ -42,7 +42,7 @@ public class EmployeeMain {
 		// Q6. Retrieve employee using Map.
 		System.out.println("Retrieve employee using Key :");
 		System.out.println("========================================");
-		EmployeeData retrieve = obj.getEmployeeById();
+		EmployeeData retrieve = obj.getEmployeeById(2);
 		System.out.println(retrieve + "\n");
 
 		// Q7. removeEmployeeSafely()
@@ -54,13 +54,8 @@ public class EmployeeMain {
 
 		// Q8.explainFailFast()
 
-		System.out.print("FailFast : ");
-		System.out.println(
-				"If the collection is changed (add or remove) during iteration, Java immediately throws a ConcurrentModificationException.");
-		System.out.println(
-				"This happens because the iterator works on the original collection and expects it not to change.");
-		System.out.println("Fail-fast helps detect programming errors early and avoids unpredictable results.");
-
+		System.out.print("FailFast : \n");
+				System.out.println(obj.explainFailFast());
 	}
 
 }
